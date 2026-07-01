@@ -99,7 +99,7 @@ const EXPERIENCE = {
 const PROJECTS = [
   {
     id: "cabtech",
-    file: "cabtech-auto-services.tsx",
+    file: "cabtech-auto-services",
     title: "CabTech Auto Services",
     subtitle: "Scheduling & Tracking System",
     desc: "A full-stack capstone system built for CabTech Auto Services to manage scheduling and service tracking end to end.",
@@ -130,7 +130,7 @@ const PROJECTS = [
   },
   {
     id: "lgu-logbook",
-    file: "lgu-logbook-system.tsx",
+    file: "lgu-logbook-system",
     title: "LGU Cabanatuan City",
     subtitle: "Digital Logbook System",
     desc: "A digital logbook built for the Office of the City Building Official to track application records and office submissions.",
