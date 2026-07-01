@@ -113,7 +113,8 @@ const PROJECTS = [
     slides: [
       {
         label: "Dashboard",
-        image: "/images/cabtech/dashboard.png",
+        image: "https://res.cloudinary.com/k0n4rwiu/image/upload/v1782931900/dashboard_s9uncy.png",
+        // image: "/images/cabtech/dashboard.png",
       },
       {
         label: "Appointments",
@@ -122,7 +123,8 @@ const PROJECTS = [
       },
       {
         label: "Service Record",
-        image: "/images/cabtech/service-record.png",
+        image: "https://res.cloudinary.com/k0n4rwiu/image/upload/v1782931897/service-record_msmod7.png",
+        // image: "/images/cabtech/service-record.png",
       },
     ],
   },
@@ -141,15 +143,18 @@ const PROJECTS = [
     slides: [
       {
         label: "Entry Log",
-        image: "/images/logbook/entry-log.png",
+        // image: "/images/logbook/entry-log.png",
+        image: "https://res.cloudinary.com/k0n4rwiu/image/upload/v1782931942/entry-log_bvv8jt.png",
       },
       {
         label: "Logbook Records",
-        image: "/images/logbook/logs.png",
+        // image: "/images/logbook/logs.png",
+        image: "https://res.cloudinary.com/k0n4rwiu/image/upload/v1782931941/logs_dj9vvc.png",
       },
       {
         label: "Status Overview",
-        image: "/images/logbook/status-overview.png",
+        // image: "/images/logbook/status-overview.png",
+        image: "https://res.cloudinary.com/k0n4rwiu/image/upload/v1782931928/status-overview_lcivg3.png",
       },
     ],
   },
@@ -161,26 +166,30 @@ const CERTS = [
     issuer: "Wadhwani Foundation",
     date: "May 2026",
     image: "/images/certificates/job-ready.png",
+        image: "https://res.cloudinary.com/k0n4rwiu/image/upload/v1782931908/job-ready_b3ori6.png",
   },
   {
     title: "English for IT",
     issuer: "Cisco Networking Academy",
     date: "December 2025",
     image: "images/certificates/english-for-it.png",
+        image: "https://res.cloudinary.com/k0n4rwiu/image/upload/v1782931925/english-for-it_b0dv4u.png",
   },
   {
     title: "JavaScript Essentials",
     issuer: "Cisco Networking Academy",
     date: "November 2025",
     image: "images/certificates/javascript-essentials.png",
+        image: "https://res.cloudinary.com/k0n4rwiu/image/upload/v1782931923/javascript-essentials_yagfjl.png",
   },
-  {
-    title:
-      "4th International Training Summit and Research Conference on Information Technology",
-    issuer: "NEUST Training Department",
-    date: "November 25–26, 2025",
-    image: "images/certificates/itsrcit.png",
-  },
+  // {
+  //   title:
+  //     "4th International Training Summit and Research Conference on Information Technology",
+  //   issuer: "NEUST Training Department",
+  //   date: "November 25–26, 2025",
+  //   image: "images/certificates/itsrcit.png",
+  //       image: "https://res.cloudinary.com/k0n4rwiu/image/upload/v1782931928/status-overview_lcivg3.png",
+  // },
 ];
 
 /* ------------------------------------------------------------------ */

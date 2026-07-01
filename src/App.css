@@ -802,7 +802,7 @@ section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1px;
-    background: var(--line-strong);
+    background: var(--paper);
     border: 1px solid var(--line-strong);
 }
 
