@@ -1,1 +1,1 @@
-A personal portfolio website showcasing my skills, projects, education, and experience in Information Technology and Web Development. Built with React and Vite, featuring a modern, responsive design and interactive project showcase.
+A personal portfolio website showcasing my skills, projects, education, and experience in Information Technology and Web Development. Built with React and Vite, featuring a modern, responsive design and interactive project showcase.s
