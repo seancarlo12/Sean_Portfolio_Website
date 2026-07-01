@@ -117,7 +117,8 @@ const PROJECTS = [
       },
       {
         label: "Appointments",
-        image: "/images/cabtech/appointments.png",
+        image: "https://res.cloudinary.com/k0n4rwiu/image/upload/f_auto,q_auto/appointments_sgbjou",
+        // image: "/images/cabtech/appointments.png",
       },
       {
         label: "Service Record",
@@ -159,7 +160,7 @@ const CERTS = [
     title: "Job Ready: Employability Skills",
     issuer: "Wadhwani Foundation",
     date: "May 2026",
-    image: "images/certificates/job-ready.png",
+    image: "/images/certificates/job-ready.png",
   },
   {
     title: "English for IT",
@@ -362,9 +363,8 @@ export default function App() {
           Tolentino
         </h1>
         <p className="hero-role">
-          BS Information Technology, Web System Development — Nueva Ecija
-          University of Science and Technology. Building practical, full-stack
-          tools for real offices and real problems.
+          BS Information Technology major in Web System Development at Nueva Ecija University of Science and Technology, 
+          focused on building practical, user-centered web applications that solve real-world business and organizational challenges.
         </p>
         <div className="hero-contacts">
           <a className="contact-pill" href={`mailto:${PROFILE.email}`}>
@@ -465,8 +465,7 @@ export default function App() {
           Selected work
         </h2>
         <p className="mono" style={{ fontSize: 12.5, color: "var(--gray)" }}>
-          Preview panels are illustrative wireframes generated from the project
-          description — swap in real screenshots any time.
+          Screenshots and demonstrations of real projects I have designed and developed.
         </p>
 
         {PROJECTS.map((p) => (
