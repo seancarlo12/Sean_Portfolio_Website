@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap");
 
-::selection{
+::selection {
     background: var(--black);
     color: var(--white);
 }
@@ -8,7 +8,7 @@
 :root {
     --black: #0a0a0a;
     --white: #ffffff;
-    --paper: #ffffff;
+    --paper: #f5f5f5;
     --line: #d8d8d3;
     --line-strong: #0a0a0a;
     --gray: #6f6f6a;
@@ -20,7 +20,7 @@
 }
 
 .app {
-    background: var(--paper);
+    background: var(--white);
     color: var(--black);
     font-family: "Inter", sans-serif;
     min-height: 100vh;
@@ -80,7 +80,7 @@ h3 {
 }
 
 .nav-solid {
-    background: rgba(246, 246, 243, 0.9);
+    background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--line-strong);
 }
@@ -180,6 +180,34 @@ section {
     padding-top: 100px;
 }
 
+.hero-content {
+    background: var(--white);
+    border: 1px solid var(--line-strong);
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.hero-text {
+    margin-left: 20px;
+}
+
+.hero-subhead {
+    margin-top: 8px;
+    font-family: "IBM Plex Mono", monospace;
+}
+
+.hero-subhead p {
+    margin: 0;
+    margin-bottom: 4px;
+}
+
+.verified-badge {
+    color: #019df5;
+    margin-left: 8px;
+    font-size: 20px;
+}
+
 .hero-kicker {
     font-family: "IBM Plex Mono", monospace;
     font-size: 13px;
@@ -187,6 +215,9 @@ section {
     text-transform: uppercase;
     color: var(--gray);
     margin-bottom: 20px;
+
+    position: relative;
+    left: 240px;
 }
 
 .hero-kicker .cursor {
@@ -205,19 +236,39 @@ section {
     }
 }
 
+.hero-header {
+    display: flex;
+    flex-direction: row;
+}
+
+.hero img {
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 1px solid var(--black);
+    position: relative;
+    bottom: 100px;
+}
+
 .hero h1 {
-    font-size: clamp(48px, 9vw, 108px);
+    font-size: clamp(16px, 2.5vw, 28px);
     line-height: 0.98;
     font-weight: 700;
     letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
 }
 
 .hero-role {
-    margin-top: 22px;
+    margin-top: -90px;
     font-family: "IBM Plex Mono", monospace;
     font-size: clamp(14px, 2vw, 18px);
     color: var(--gray);
-    max-width: 560px;
+    max-width: 80%;
+}
+
+.hero-role li {
+    margin-bottom: 8px;
 }
 
 .hero-contacts {
@@ -268,6 +319,151 @@ section {
     background: linear-gradient(var(--gray-soft), transparent);
 }
 
+/* ===========================
+   TABLET (1024px and below)
+=========================== */
+@media (max-width: 1024px) {
+    .hero {
+        min-height: auto;
+        padding-top: 120px;
+        padding-bottom: 80px;
+    }
+
+    .hero-content {
+        padding: 24px;
+    }
+
+    .hero-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero img {
+        position: static;
+        width: 170px;
+        margin-bottom: 20px;
+    }
+
+    .hero-text {
+        margin-left: 0;
+    }
+
+    .hero-kicker {
+        position: static;
+        left: auto;
+        margin-bottom: 18px;
+    }
+
+    .hero h1 {
+        justify-content: center;
+    }
+
+    .hero-role {
+        margin-top: 20px;
+        max-width: 100%;
+    }
+
+    .hero-contacts {
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .hero-scroll {
+        display: none;
+    }
+}
+
+/* ===========================
+   MOBILE (768px and below)
+=========================== */
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 100px;
+    }
+
+    .hero-content {
+        padding: 20px;
+    }
+
+    .hero img {
+        width: 150px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .verified-badge {
+        font-size: 18px;
+    }
+
+    .hero-role {
+        font-size: 15px;
+        margin-top: 18px;
+    }
+
+    .hero-role ul {
+        padding-left: 18px;
+    }
+
+    .hero-contacts {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .contact-pill {
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+/* ===========================
+   SMALL PHONES (480px)
+=========================== */
+@media (max-width: 480px) {
+    .hero {
+        padding-top: 80px;
+    }
+
+    .hero-content {
+        padding: 16px;
+    }
+
+    .hero img {
+        width: 120px;
+    }
+
+    .hero-kicker {
+        font-size: 11px;
+        letter-spacing: 0.08em;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero-subhead {
+        font-size: 14px;
+    }
+
+    .hero-role {
+        font-size: 14px;
+    }
+
+    .hero-contacts {
+        margin-top: 24px;
+    }
+
+    .contact-pill {
+        font-size: 11px;
+        padding: 10px;
+    }
+}
+
 /* ---------------- ABOUT / EDUCATION ---------------- */
 .about-grid {
     display: grid;
@@ -293,6 +489,7 @@ section {
     border: 1px solid var(--line-strong);
     padding: 28px 30px;
     background: var(--white);
+    border-radius: 4px;
 }
 
 .edu-school {
@@ -333,7 +530,7 @@ section {
 }
 
 .skill-block {
-    background: var(--paper);
+    background: var(--white);
     padding: 30px;
 }
 
@@ -362,7 +559,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap :5px;
+    gap: 5px;
     cursor: default;
 }
 
@@ -539,10 +736,12 @@ section {
     border: 1px solid var(--line-strong);
     background: var(--white);
 }
-.slide-image{
+
+.slide-image {
     width: 100%;
     height: 100%;
 }
+
 .browser-chrome {
     display: flex;
     align-items: center;
@@ -802,7 +1001,7 @@ section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1px;
-    background: var(--paper);
+    background: var(--white);
     border: 1px solid var(--line-strong);
 }
 
@@ -813,7 +1012,7 @@ section {
 }
 
 .cert-card {
-    background: var(--paper);
+    background: var(--white);
     padding: 30px;
     text-align: left;
     border: none;
@@ -984,10 +1183,13 @@ section {
     display: flex;
     gap: 8px;
 }
-nav, section{
+
+nav,
+section {
     border-left: 1px solid var(--gray-soft);
     border-right: 1px solid var(--gray-soft);
 }
+
 .modal-note {
     margin-top: 18px;
     font-size: 11.5px;

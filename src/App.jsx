@@ -6,6 +6,11 @@ import {
   FaEnvelope,
   FaPhone,
   FaExternalLinkAlt,
+  FaCheckCircle,
+  FaDownload,
+  FaMobileAlt,
+  FaPencilRuler,
+  FaObjectGroup,
 } from "react-icons/fa";
 
 import Lenis from "lenis";
@@ -24,7 +29,7 @@ import {
 
 const PROFILE = {
   name: "Sean Carlo Tolentino",
-  role: "Web Developer | IT Support",
+  text: "Looking for Opportunities to Create and Grow",
   phone: "0938-979-1867",
   email: "seantolentino2368@gmail.com",
   github: "github.com/seancarlo12",
@@ -40,16 +45,20 @@ const SKILLS = [
   },
   {
     group: "Web Development",
-    items: ["HTML", "CSS", "React", "PHP", "MySQL"],
+    items: [
+      "HTML",
+      "CSS",
+      "React",
+      "PHP",
+      "MySQL",
+      "Bootstrap",
+      "Tailwind",
+      "Chart.js",
+    ],
   },
   {
-    group: "IT Support & Systems",
-    items: [
-      "Windows OS",
-      "Microsoft Office",
-      "Troubleshooting",
-      "System Configuration",
-    ],
+    group: "UI/UX",
+    items: ["Figma", "Responsive Design", "Wireframing", "Prototyping"],
   },
   {
     group: "Tools",
@@ -70,11 +79,14 @@ const SKILL_ICONS = {
   React: "devicon-react-original",
   PHP: "devicon-php-plain",
   MySQL: "devicon-mysql-original",
+  Bootstrap: "devicon-bootstrap-plain",
+  Tailwind: "devicon-tailwindcss-plain",
+  "Chart.js": "devicon-chartjs-plain",
 
-  "Windows OS": "devicon-windows8-original",
-  "Microsoft Office": "devicon-microsoftsqlserver-plain", // placeholder
-  Troubleshooting: "devicon-devicon-plain",
-  "System Configuration": "devicon-devicon-plain",
+  Figma: "devicon-figma-plain",
+  "Responsive Design": "devicon-devicon-plain",
+  Wireframing: "devicon-devicon-plain",
+  Prototyping: "devicon-devicon-plain",
 
   "VS Code": "devicon-vscode-plain",
   Git: "devicon-git-plain",
@@ -113,17 +125,20 @@ const PROJECTS = [
     slides: [
       {
         label: "Dashboard",
-        image: "https://res.cloudinary.com/k0n4rwiu/image/upload/v1782931900/dashboard_s9uncy.png",
+        image:
+          "https://res.cloudinary.com/k0n4rwiu/image/upload/v1782931900/dashboard_s9uncy.png",
         // image: "/images/cabtech/dashboard.png",
       },
       {
         label: "Appointments",
-        image: "https://res.cloudinary.com/k0n4rwiu/image/upload/f_auto,q_auto/appointments_sgbjou",
+        image:
+          "https://res.cloudinary.com/k0n4rwiu/image/upload/f_auto,q_auto/appointments_sgbjou",
         // image: "/images/cabtech/appointments.png",
       },
       {
         label: "Service Record",
-        image: "https://res.cloudinary.com/k0n4rwiu/image/upload/v1782931897/service-record_msmod7.png",
+        image:
+          "https://res.cloudinary.com/k0n4rwiu/image/upload/v1782931897/service-record_msmod7.png",
         // image: "/images/cabtech/service-record.png",
       },
     ],
@@ -144,17 +159,20 @@ const PROJECTS = [
       {
         label: "Entry Log",
         // image: "/images/logbook/entry-log.png",
-        image: "https://res.cloudinary.com/k0n4rwiu/image/upload/v1782931942/entry-log_bvv8jt.png",
+        image:
+          "https://res.cloudinary.com/k0n4rwiu/image/upload/v1782931942/entry-log_bvv8jt.png",
       },
       {
         label: "Logbook Records",
         // image: "/images/logbook/logs.png",
-        image: "https://res.cloudinary.com/k0n4rwiu/image/upload/v1782931941/logs_dj9vvc.png",
+        image:
+          "https://res.cloudinary.com/k0n4rwiu/image/upload/v1782931941/logs_dj9vvc.png",
       },
       {
         label: "Status Overview",
         // image: "/images/logbook/status-overview.png",
-        image: "https://res.cloudinary.com/k0n4rwiu/image/upload/v1782931928/status-overview_lcivg3.png",
+        image:
+          "https://res.cloudinary.com/k0n4rwiu/image/upload/v1782931928/status-overview_lcivg3.png",
       },
     ],
   },
@@ -166,21 +184,24 @@ const CERTS = [
     issuer: "Wadhwani Foundation",
     date: "May 2026",
     image: "/images/certificates/job-ready.png",
-        image: "https://res.cloudinary.com/k0n4rwiu/image/upload/v1782931908/job-ready_b3ori6.png",
+    image:
+      "https://res.cloudinary.com/k0n4rwiu/image/upload/v1782931908/job-ready_b3ori6.png",
   },
   {
     title: "English for IT",
     issuer: "Cisco Networking Academy",
     date: "December 2025",
     image: "images/certificates/english-for-it.png",
-        image: "https://res.cloudinary.com/k0n4rwiu/image/upload/v1782931925/english-for-it_b0dv4u.png",
+    image:
+      "https://res.cloudinary.com/k0n4rwiu/image/upload/v1782931925/english-for-it_b0dv4u.png",
   },
   {
     title: "JavaScript Essentials",
     issuer: "Cisco Networking Academy",
     date: "November 2025",
     image: "images/certificates/javascript-essentials.png",
-        image: "https://res.cloudinary.com/k0n4rwiu/image/upload/v1782931923/javascript-essentials_yagfjl.png",
+    image:
+      "https://res.cloudinary.com/k0n4rwiu/image/upload/v1782931923/javascript-essentials_yagfjl.png",
   },
   // {
   //   title:
@@ -363,41 +384,70 @@ export default function App() {
       {/* HERO */}
       <section className="hero" id="top">
         <div className="hero-kicker">
-          {PROFILE.role}
+          {PROFILE.text}
           <span className="cursor" />
         </div>
-        <h1>
-          Sean Carlo
-          <br />
-          Tolentino
-        </h1>
-        <p className="hero-role">
-          BS Information Technology major in Web System Development at Nueva Ecija University of Science and Technology, 
-          focused on building practical, user-centered web applications that solve real-world business and organizational challenges.
-        </p>
-        <div className="hero-contacts">
-          <a className="contact-pill" href={`mailto:${PROFILE.email}`}>
-            <FaEnvelope size={14} /> {PROFILE.email}
-          </a>
-          <a className="contact-pill" href={`tel:${PROFILE.phone}`}>
-            <FaPhone size={14} /> {PROFILE.phone}
-          </a>
-          <a
-            className="contact-pill"
-            href={PROFILE.githubUrl}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaGithub size={14} /> {PROFILE.github}
-          </a>
-          <a
-            className="contact-pill"
-            href={PROFILE.linkedinUrl}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaLinkedin size={14} /> {PROFILE.linkedin}
-          </a>
+        <div className="hero-content">
+          <div className="hero-header">
+            <img src="src\assets\2x2.png" alt="Sean Carlo Tolentino" />
+            <div className="hero-text">
+              <h1>
+                Sean Carlo Tolentino
+                <FaCheckCircle className="verified-badge" title="Verified" />
+              </h1>
+              <div className="hero-subhead">
+                <p className="title">Front End Web Developer</p>
+                <p className="loc">Cabanatuan City, Nueva Ecija, Philippines</p>
+              </div>
+            </div>
+          </div>
+          <ul className="hero-role">
+            <li>
+              I build responsive web applications using React, PHP, JavaScript,
+              and MySQL with a focus on clean, maintainable code.
+            </li>
+            <li>
+              I develop user-centered solutions that streamline workflows,
+              improve efficiency, and solve real-world problems.
+            </li>
+            <li>
+              I continuously expand my skills in modern web technologies,
+              version control, and IT support to deliver reliable digital
+              solutions.
+            </li>
+          </ul>
+          <div className="hero-contacts">
+            <a className="contact-pill" href={`mailto:${PROFILE.email}`}>
+              <FaEnvelope size={14} /> {PROFILE.email}
+            </a>
+            <a className="contact-pill" href={`tel:${PROFILE.phone}`}>
+              <FaPhone size={14} /> {PROFILE.phone}
+            </a>
+            <a
+              className="contact-pill"
+              href={PROFILE.githubUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaGithub size={14} /> {PROFILE.github}
+            </a>
+            <a
+              className="contact-pill"
+              href={PROFILE.linkedinUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaLinkedin size={14} /> {PROFILE.linkedin}
+            </a>
+
+            <a
+              className="contact-pill"
+              href="https://res.cloudinary.com/k0n4rwiu/image/upload/fl_attachment:Sean_Carlo_Tolentino_Resume/RESUME_WEB_hc2ff8.pdf"
+            >
+              <FaDownload size={14} />
+              <span>Download My Resume</span>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -474,7 +524,8 @@ export default function App() {
           Selected work
         </h2>
         <p className="mono" style={{ fontSize: 12.5, color: "var(--gray)" }}>
-          Screenshots and demonstrations of real projects I have designed and developed.
+          Screenshots and demonstrations of real projects I have designed and
+          developed.
         </p>
 
         {PROJECTS.map((p) => (
@@ -569,9 +620,7 @@ export default function App() {
             <FaLinkedin size={18} />
           </a>
         </div>
-        <div className="footer-copy">
-          © 2026 Sean Carlo Tolentino
-        </div>
+        <div className="footer-copy">© 2026 Sean Carlo Tolentino</div>
       </footer>
 
       <CertificateModal cert={activeCert} onClose={() => setActiveCert(null)} />
