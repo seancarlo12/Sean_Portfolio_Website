@@ -389,7 +389,7 @@ export default function App() {
         </div>
         <div className="hero-content">
           <div className="hero-header">
-            <img src="src\assets\2x2.png" alt="Sean Carlo Tolentino" />
+            <img src="https://res.cloudinary.com/k0n4rwiu/image/upload/v1783581754/2x2_nye8vz.png" alt="Sean Carlo Tolentino" />
             <div className="hero-text">
               <h1>
                 Sean Carlo Tolentino
